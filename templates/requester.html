@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requester Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%; /* Adjusted for better mobile view */
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #444;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 500px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 600px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 700px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 800px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 599px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Requester Form</h1>
+        <form action="/requester" method="post">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="AIML">AIML</option>
+                <option value="CS">CS</option>
+                <option value="DS">DS</option>
+                <option value="EEE">EEE</option>
+                <option value="CE">CE</option>
+                <option value="ME">ME</option>
+            </select>
+
+            <label for="problem_category">Problem Category:</label>
+            <select id="problem_category" name="problem_category" required>
+                <option value="COMPUTER_SERVICES">Computer Services</option>
+                <option value="ELECTRICAL_ISSUES">Electrical Issues</option>
+                <option value="CIVIL_WORKS">Civil Works</option>
+                <option value="OTHERS">Others</option>
+            </select>
+
+            <label for="to_mail">To Mail:</label>
+            <select id="to_mail" name="to_mail" required>
+                <option value="gopisankarnelluri17@gmail.com">gopisankarnelluri17@gmail.com</option>
+                <option value="gopisankarnelluri22@gmail.com">gopisankarnelluri22@gmail.com</option>
+            </select>
+
+            <label for="problem_description">Problem Description:</label>
+            <textarea id="problem_description" name="problem_description" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

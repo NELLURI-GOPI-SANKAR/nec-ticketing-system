@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Selection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%; /* Adjust width to be more flexible on mobile */
+            max-width: 400px; /* Set a max width for larger screens */
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #444;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%; /* Make the button full width on mobile */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NARASARAOPETA ENGINEERING COLLEGE</h1>
+        <h2>Select Your Role</h2>
+        <form action="/submit" method="post">
+            <label>
+                <input type="radio" name="role" value="requester">
+                REQUESTER
+            </label>
+            <label>
+                <input type="radio" name="role" value="supporting_team">
+                SUPPORTING TEAM
+            </label>
+            <label>
+                <input type="radio" name="role" value="dashboard">
+                DASHBOARD
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

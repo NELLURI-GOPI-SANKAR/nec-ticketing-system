@@ -69,10 +69,10 @@ def requester_form():
             connection.commit()
         
         # Send email to user
-        send_email(email, 'Problem Submission Received', f'Your problem has been submitted successfully. Your problem ID is {problem1_id}.')
+        send_email(email, 'WE HAVE RECEIVED YOUR PROBLEM', f'Your problem has been submitted successfully regarding {problem_description}. Your problem ID is {problem1_id}.\nwe will solve it soon.\n\nbest regards,\nnarasaraopeta engineering college,\nnarasaraopeta.')
 
         # Send email to the selected recipient
-        send_email(to_mail, 'New Problem Submitted', f'A new problem has been submitted by {name}. Problem ID: {problem1_id}\n\nProblem Description: {problem_description}')
+        send_email(to_mail, 'New Problem Submitted', f'A new problem has been submitted by {name} with the Problem ID: {problem1_id} regarding {problem_description}\nPLEASE SOLVE IT SOON.\n\nbest regards,\nnarasaraopeta engineering college,\n narasaraopeta.')
 
         return redirect(url_for('index'))
 
@@ -107,7 +107,7 @@ def supporter_form():
                 connection.commit()
                 
                 # Send email to the requester
-                send_email(requester_email, 'Problem Status Update', f'Your problem with ID {problem1_id} has been {status}.\n\nRemarks: {remarks}')
+                send_email(requester_email, 'Problem Status Update', f'Your problem with ID {problem1_id} has been {status}.\nTHANK U FOR YOUR COOPERATION\n\nbest regards,\nnarasaraopeta engineering college,\n narasaraopeta.')
 
         return redirect(url_for('index'))
 
